@@ -2,11 +2,15 @@ package main
 
 import "fmt"
 
-func superAdd(numbers ...int) int {
-	fmt.Println(numbers)
-	return 1
-}
+func ifmoon(age int) bool {
 
+	if koreanAge := age + 2; koreanAge >= 18 {
+		return true
+	}
+
+	return false
+
+}
 func main() {
-	superAdd(1, 2, 3, 4, 5, 6)
+	fmt.Println(ifmoon(16))
 }

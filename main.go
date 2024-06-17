@@ -8,5 +8,5 @@ func superAdd(numbers ...int) int {
 }
 
 func main() {
-	superAdd(1, 2, 3, 4, 5)
+	superAdd(1, 2, 3, 4, 5, 6)
 }

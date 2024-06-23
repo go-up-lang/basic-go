@@ -2,12 +2,14 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/my-project/accounts"
+	"math/rand"
+	"time"
 )
 
 func main() {
-	account := accounts.NewAccount("nico")
-	account.owner = "new owner"
-	fmt.Println(account)
+	rand.Seed(time.Now().UnixNano())
+	for i := 0; i < 100; i++ {
+		randNum := rand.Intn(96) + 5
+		fmt.Println(randNum)
+	}
 }

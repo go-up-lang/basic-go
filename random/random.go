@@ -14,5 +14,11 @@ type RandomNumber struct {
 func Random() RandomNumber {
 	rand.Seed(time.Now().UnixNano())
 	randNum := rand.Intn(41) + 5
-	return RandomNumber{Rand_Num: randNum}
+	bonusNum := rand.Intn(41) + 5
+
+	return RandomNumber{
+		Rand_Num:  randNum,
+		Bonus_Num: bonusNum,
+	}
+
 }

@@ -2,14 +2,12 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
-	"time"
+
+	"github.com/my-project/random"
 )
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
-	for i := 0; i < 100; i++ {
-		randNum := rand.Intn(96) + 5
-		fmt.Println(randNum)
-	}
+	lotto := random.Random()
+
+	fmt.Println("로또 번호는 : ", lotto)
 }

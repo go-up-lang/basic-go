@@ -7,7 +7,8 @@ import (
 )
 
 func main() {
-	lotto := random.Random()
+	random.Random()
 
-	fmt.Println("로또 번호는 : ", lotto)
+	fmt.Println(randomNumbers.Rand_Num)
+	fmt.Println(randomNumbers.Bonus_Num)
 }

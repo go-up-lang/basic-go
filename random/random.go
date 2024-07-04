@@ -12,18 +12,13 @@ type RandomNumber struct {
 	Bonus_Num int
 }
 
-func Random() []RandomNumber {
+func Random() {
 	rand.Seed(time.Now().UnixNano())
-	var randomNumbers []RandomNumber
-
-	for i := 0; i < 5; i++ {
-		randNum := rand.Intn(41) + 5
-		bonusNum := rand.Intn(41) + 5
-		randomNumbers = append(randomNumbers, RandomNumber{
-			Rand_Num:  randNum,
-			Bonus_Num: bonusNum,
-		})
+	for i := 1; i <= 5; i++ {
+		Random_value := rand.Intn(45) + 1
+		Bonus_value := rand.Intn(45) + 1
+		clova := RandomNumber{Rand_Num: Random_value, Bonus_Num: Bonus_value}
+		fmt.Println(clova)
 	}
-	fmt.Println("이 값은 random.go : ", randomNumbers)
-	return randomNumbers
+
 }

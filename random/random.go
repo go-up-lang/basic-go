@@ -15,10 +15,12 @@ type RandomNumber struct {
 func Random() {
 	rand.Seed(time.Now().UnixNano())
 	for i := 1; i <= 5; i++ {
-		Random_value := rand.Intn(45) + 1
+		for j := 1; j <= 5; j++ {
+			Random_value := rand.Intn(45) + 1
+			fmt.Print(Random_value, ", ")
+		}
 		Bonus_value := rand.Intn(45) + 1
-		clova := RandomNumber{Rand_Num: Random_value, Bonus_Num: Bonus_value}
-		fmt.Println(clova)
+		fmt.Println(" + ", Bonus_value)
 	}
 
 }
